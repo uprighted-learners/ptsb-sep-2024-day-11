@@ -41,5 +41,42 @@ function startCountDown(start, delay) {
     setTimeout(countDown, delay);
 }
 
-startCountDown(10, 1000);
+// startCountDown(10, 1000);
 
+// draw a pyramid with a function
+function drawPyramid(rows = 10, character = '*', delay = 1000) {
+    for (let i = 1; i <= rows; i++) {
+        setTimeout(() => {
+            let output = '';
+            for (let j = 1; j <= rows - i; j++) {
+                output += " ";
+            }
+            for (let k = 1; k < (2 * i - 1); k++) {
+                output += character;
+            }
+            console.log(output);
+        }, i * delay)
+    }
+}
+
+drawPyramid(15, "#", 1000);
+
+function someName(parameters) {
+    // we do some work
+    console.log(parameters);
+}
+
+someName("Hello");
+
+const someFunction = (parameters) => {
+    // we do some work
+    console.log(parameters);
+}
+
+someFunction("Hello");
+
+let thisFunction = () => {
+    console.log("Hello");
+}
+
+thisFunction();
