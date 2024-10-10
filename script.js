@@ -80,3 +80,33 @@ let thisFunction = () => {
 }
 
 thisFunction();
+
+function someMessage(string = "Hello as a default string") {
+    console.log(string);
+}
+
+someMessage();
+
+function returnAllSums(a = 0, b = 0, c = 0, d = 0) {
+    return a + b + c + d;
+}
+
+console.log(returnAllSums(1, 2, 10, 100, 1000));
+
+const nicksFunction = (name) => {
+    console.log("Hey " + name + " from Nick! part 1");
+    return ("Hey " + name + " from Nick! part 2");
+}
+
+const bigGreeting = nicksFunction("chris");
+
+function multiply(a, b) {
+    return a * b;
+}
+
+let numberOfFiends = multiply(5, 10);
+console.log("number of friends", numberOfFiends);
+
+console.log("Chris has " + multiply(5, 10) + " friends.");
+
+console.log(bigGreeting);
